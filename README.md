@@ -3,6 +3,10 @@ PepQuery: a peptide-centric search engine for novel peptide searching.
 
 **Web server**: http://pepquery.org/
 
+PepQuery can be used in two ways:
+1. [Online version](http://pepquery2.pepquery.org/): search a peptide of interest in curated large-scale proteomics MS/MS datasets;
+2. [Standalone version](http://pepquery.org/download.html): batch search a list of peptides in any MS/MS datasets.
+
 ## How to cite:
 
 Wen, B., et al. (2019). "PepQuery enables fast, accurate, and convenient proteomic validation of novel genomic alterations." Genome research 29(3): 485-493. [Manuscript](https://genome.cshlp.org/content/29/3/485.full)
