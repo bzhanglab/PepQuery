@@ -1,0 +1,122 @@
+{
+  "MS1_H_MS2_L_LF": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1",
+    "variable_modification_index": "2",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.6,
+    "itolu": "Da"
+  },
+  "MS1_H_MS2_H_LF": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1",
+    "variable_modification_index": "2",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "iTRAQ4": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,21,22",
+    "variable_modification_index": "2,23",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "iTRAQ4_phosphorylation": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,21,22",
+    "variable_modification_index": "2,23,7,8,9",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "iTRAQ4_glycosylation": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,21,22",
+    "variable_modification_index": "2,23,3",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "TMT10_11": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,11,12",
+    "variable_modification_index": "2",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "TMT10_11_MS2_L": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,11,12",
+    "variable_modification_index": "2",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.6,
+    "itolu": "Da"
+  },
+  "TMT10_11_MS2_L_phosphorylation": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,11,12",
+    "variable_modification_index": "2,7,8,9",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.6,
+    "itolu": "Da"
+  },
+  "TMT10_11_phosphorylation": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,11,12",
+    "variable_modification_index": "2,7,8,9",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "TMT10_11_acetylation": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 2,
+    "fixed_modification_index": "1,11,12",
+    "variable_modification_index": "2,6",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "TMT10_11_ubiquitination": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 2,
+    "fixed_modification_index": "1,11,12",
+    "variable_modification_index": "2,10",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  },
+  "TMT10_11_glycosylation": {
+    "enzyme_index": 1,
+    "max_missed_cleavage": 1,
+    "fixed_modification_index": "1,11,12",
+    "variable_modification_index": "2,3",
+    "tol": 20,
+    "tolu": "ppm",
+    "itol": 0.05,
+    "itolu": "Da"
+  }
+}

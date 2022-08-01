@@ -1,0 +1,911 @@
+{
+   "CPTAC_TCGA_Colon_Cancer_Proteome_PDC000111": {
+    "dataset_name": "CPTAC_TCGA_Colon_Cancer_Proteome_PDC000111",
+    "short_name": "CPTAC-COAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_colon_2014_labelfree/",
+    "sample_annotation_file": null,
+    "parameter": "MS1_H_MS2_L_LF",
+    "species": "human",
+    "data_type":"w",
+    "publication":"25043054",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000111",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f6_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f6_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_TCGA_Breast_Cancer_Proteome_PDC000173": {
+    "dataset_name": "CPTAC_TCGA_Breast_Cancer_Proteome_PDC000173",
+    "short_name": "CPTAC-BRCA",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_breast_2016_itraq/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4",
+    "species": "human",
+    "data_type":"w",
+    "publication":"27251275",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000173",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f103_157_6_v101_117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f103_157_6_v101_117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_TCGA_Breast_Cancer_Phosphoproteome_PDC000174": {
+    "dataset_name": "CPTAC_TCGA_Breast_Cancer_Phosphoproteome_PDC000174",
+    "short_name": "CPTAC-BRCA",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_breast_2016_itraq_phos/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"27251275",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000174",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f103_157_6_v101_114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f103_157_6_v101_114_117_118_128/hg38_Ensembl_20190910.fasta"
+	
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_TCGA_Ovarian_Proteome_PDC000113_PDC000114": {
+    "dataset_name": "CPTAC_TCGA_Ovarian_Proteome_PDC000113_PDC000114",
+    "short_name": "CPTAC-OV",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_ovarian_2014_proteome/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4",
+    "species": "human",
+    "data_type":"w",
+    "publication":"27372738",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000113,https://pdc.cancer.gov/pdc/study/PDC000114",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f103_157_6_v101_117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f103_157_6_v101_117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_TCGA_Ovarian_Phosphoproteome_PDC000115": {
+    "dataset_name": "CPTAC_TCGA_Ovarian_Phosphoproteome_PDC000115",
+    "short_name": "CPTAC-OV",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_ovarian_2014_phos/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication": "27372738",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000115",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f103_157_6_v101_114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f103_157_6_v101_114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_TCGA_Ovarian_Glycoproteome_PDC000112": {
+    "dataset_name": "CPTAC_TCGA_Ovarian_Glycoproteome_PDC000112",
+    "short_name": "CPTAC-OV",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_ovarian_2014_glyco/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4_glycosylation",
+    "species": "human",
+    "data_type":"g",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000112",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f103_157_6_v101_117_158_159/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f103_157_6_v101_117_158_159/hg38_Ensembl_20190910.fasta"
+    }
+  },
+  
+  "CPTAC_Prospective_Colon_VU_Proteome_PDC000109": {
+    "dataset_name": "CPTAC_Prospective_Colon_VU_Proteome_PDC000109",
+    "short_name": "CPTAC-COAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_colon_2019_labelfree/",
+    "sample_annotation_file": null,
+    "parameter": "MS1_H_MS2_H_LF",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000109",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f6_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f6_v117/hg38_Ensembl_20190910.fasta"
+    }
+  },
+  "CPTAC_Prospective_Colon_PNNL_Proteome_PDC000116": {
+    "dataset_name": "CPTAC_Prospective_Colon_PNNL_Proteome_PDC000116",
+    "short_name": "CPTAC-COAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_colon_2019_TMT_proteome/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000116",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_Prospective_Colon_PNNL_Phosphoproteome_PDC000117": {
+    "dataset_name": "CPTAC_Prospective_Colon_PNNL_Phosphoproteome_PDC000117",
+    "short_name": "CPTAC-COAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/cptac_colon_2019_TMT_phos/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000117",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_CCRCC_Discovery_Study_Phosphoproteme_PDC000128": {
+    "dataset_name": "CPTAC_CCRCC_Discovery_Study_Phosphoproteme_PDC000128",
+    "short_name": "CPTAC-CCRCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_CCRCC_Discovery_Study_Phosphoproteme_PDC000128_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000128",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_CCRCC_Discovery_Study_Proteome_PDC000127": {
+    "dataset_name": "CPTAC_CCRCC_Discovery_Study_Proteome_PDC000127",
+    "short_name": "CPTAC-CCRCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_CCRCC_Discovery_Study_Proteome_PDC000127_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000127",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_LUAD_Discovery_Study_Proteome_PDC000153": {
+    "dataset_name": "CPTAC_LUAD_Discovery_Study_Proteome_PDC000153",
+    "short_name": "CPTAC-LUAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_LUAD_Discovery_Study_Proteome_PDC000153_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000153",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta",
+      "test": "/data/wenbo/data/refdb/test_pgk2/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_LUAD_Discovery_Study_Phosphoproteome_PDC000149": {
+    "dataset_name": "CPTAC_LUAD_Discovery_Study_Phosphoproteome_PDC000149",
+    "short_name": "CPTAC-LUAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_LUAD_Discovery_Study_Phosphoproteome_PDC000149_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000149",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_LUAD_Discovery_Study_Acetylome_PDC000224": {
+    "dataset_name": "CPTAC_LUAD_Discovery_Study_Acetylome_PDC000224",
+    "short_name": "CPTAC-LUAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_LUAD_Discovery_Study_Acetylome_PDC000224/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_acetylation",
+    "species": "human",
+    "data_type":"a",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000224",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_Prospective_Breast_BI_Acetylome_PDC000239": {
+    "dataset_name": "CPTAC_Prospective_Breast_BI_Acetylome_PDC000239",
+    "short_name": "CPTAC-BRCA",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/Prospective_Breast_BI_Acetylome_PDC000239/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_acetylation",
+    "species": "human",
+    "data_type":"a",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000239",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_Prospective_Breast_BI_Phosphoproteome_PDC000121": {
+    "dataset_name": "CPTAC_Prospective_Breast_BI_Phosphoproteome_PDC000121",
+    "short_name": "CPTAC-BRCA",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Prospective_Breast_BI_Phosphoproteome_PDC000121_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000121",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_Prospective_Breast_BI_Proteome_PDC000120": {
+    "dataset_name": "CPTAC_Prospective_Breast_BI_Proteome_PDC000120",
+    "short_name": "CPTAC-BRCA",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Prospective_Breast_BI_Proteome_PDC000120_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000120",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_UCEC_Discovery_Study_Proteome_PDC000125": {
+    "dataset_name": "CPTAC_UCEC_Discovery_Study_Proteome_PDC000125",
+    "short_name": "CPTAC-UCEC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_UCEC_Discovery_Study_Proteome_PDC000125_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000125",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_UCEC_Discovery_Study_Phosphoproteome_PDC000126": {
+    "dataset_name": "CPTAC_UCEC_Discovery_Study_Phosphoproteome_PDC000126",
+    "short_name": "CPTAC-UCEC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_UCEC_Discovery_Study_Phosphoproteome_PDC000126_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000126",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_UCEC_Discovery_Study_Acetylome_PDC000226": {
+    "dataset_name": "CPTAC_UCEC_Discovery_Study_Acetylome_PDC000226",
+    "short_name": "CPTAC-UCEC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_UCEC_Discovery_Study_Acetylome_PDC000226/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_acetylation",
+    "species": "human",
+    "data_type":"a",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000226",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "CPTAC_Prospective_Ovarian_JHU_Proteome_PDC000110": {
+    "dataset_name": "CPTAC_Prospective_Ovarian_JHU_Proteome_PDC000110",
+    "short_name": "CPTAC-OV",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Prospective_Ovarian_JHU_Proteome_PDC000110/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000110",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_Prospective_Ovarian_PNNL_Proteome_Qeplus_PDC000118": {
+    "dataset_name": "CPTAC_Prospective_Ovarian_PNNL_Proteome_Qeplus_PDC000118",
+    "short_name": "CPTAC-OV",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Prospective_Ovarian_PNNL_Proteome_Qeplus_PDC000118_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000118",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_Prospective_Ovarian_PNNL_Phosphoproteome_PDC000119": {
+    "dataset_name": "CPTAC_Prospective_Ovarian_PNNL_Phosphoproteome_PDC000119",
+    "short_name": "CPTAC-OV",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Prospective_Ovarian_PNNL_Phosphoproteome_PDC000119_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000119",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "CPTAC_Prospective_Ovarian_JHU_Glycoproteome_PDC000251": {
+    "dataset_name": "CPTAC_Prospective_Ovarian_JHU_N_linked_Glycosite_containing_peptide_PDC000251",
+    "short_name": "CPTAC-OV",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Prospective_Ovarian_JHU_N_linked_Glycosite_containing_peptide_PDC000251/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_glycosylation",
+    "species": "human",
+    "data_type":"g",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000251",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_HNSCC_Discovery_Study_Proteome_PDC000221": {
+    "dataset_name": "CPTAC_HNSCC_Discovery_Study_Proteome_PDC000221",
+    "short_name": "CPTAC-HNSCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_HNSCC_Discovery_Study_Proteome_PDC000221/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000221",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_HNSCC_Discovery_Study_Phosphoproteome_PDC000222": {
+    "dataset_name": "CPTAC_HNSCC_Discovery_Study_Phosphoproteome_PDC000222",
+    "short_name": "CPTAC-HNSCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_HNSCC_Discovery_Study_Phosphoproteome_PDC000222/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000222",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_LSCC_Discovery_Study_Proteome_PDC000234": {
+    "dataset_name": "CPTAC_LSCC_Discovery_Study_Proteome_PDC000234",
+    "short_name": "CPTAC-LSCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_LSCC_Discovery_Study_Proteome_PDC000234/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000234",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_LSCC_Discovery_Study_Phosphoproteome_PDC000232": {
+    "dataset_name": "CPTAC_LSCC_Discovery_Study_Phosphoproteome_PDC000232",
+    "short_name": "CPTAC-LSCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_LSCC_Discovery_Study_Phosphoproteome_PDC000232/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000232",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_LSCC_Discovery_Study_Acetylome_PDC000233": {
+    "dataset_name": "CPTAC_LSCC_Discovery_Study_Acetylome_PDC000233",
+    "short_name": "CPTAC-LSCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_LSCC_Discovery_Study_Acetylome_PDC000233/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_acetylation",
+    "species": "human",
+    "data_type":"a",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000233",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_LSCC_Discovery_Study_Ubiquitylome_PDC000237": {
+    "dataset_name": "CPTAC_LSCC_Discovery_Study_Ubiquitylome_PDC000237",
+    "short_name": "CPTAC-LSCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_LSCC_Discovery_Study_Ubiquitylome_PDC000237/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_ubiquitination",
+    "species": "human",
+    "data_type":"u",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000237",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v114_117_118_128/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+
+  "CPTAC_PDA_Discovery_Study_Proteome_PDC000270": {
+    "dataset_name": "CPTAC_PDA_Discovery_Study_Proteome_PDC000270",
+    "short_name": "CPTAC-PDAC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_PDA_Discovery_Study_Proteome_PDC000270/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000270",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CPTAC_PDA_Discovery_Study_Phosphoproteome_PDC000271": {
+    "dataset_name": "CPTAC_PDA_Discovery_Study_Phosphoproteome_PDC000271",
+    "short_name": "CPTAC-PDAC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_PDA_Discovery_Study_Phosphoproteome_PDC000271/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000271",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "CCLE_proteome_MSV000085836": {
+    "dataset_name": "CCLE_proteome_MSV000085836",
+    "short_name": "CCLE",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CCLE_proteome_MSV000085836_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_MS2_L",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"ftp://massive.ucsd.edu/MSV000085836/",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "GTEx_32_Tissues_Proteome_PXD016999": {
+    "dataset_name": "GTEx_32_Tissues_Proteome_PXD016999",
+    "short_name": "GTEx_32_Tissues",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/PXD016999_Index/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_MS2_L",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://www.ebi.ac.uk/pride/archive/projects/PXD016999",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+        "a":"",
+        "b":""
+    }
+  },
+  "Proteogenomics_of_Gastric_Cancer_Proteome_PDC000214": {
+    "dataset_name": "Proteogenomics_of_Gastric_Cancer_Proteome_PDC000214",
+    "short_name": "ICPC-GC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/ICPC_Gastric_Cancer_Proteome_PDC000214_Index/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000214",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "Proteogenomics_of_Gastric_Cancer_Phosphoproteome_PDC000215": {
+    "dataset_name": "Proteogenomics_of_Gastric_Cancer_Phosphoproteome_PDC000215",
+    "short_name": "ICPC-GC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/Proteogenomics_of_Gastric_Cancer_Phosphoproteome_PDC000215/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000215",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "Proteogenomics_of_Gastric_Cancer_Glycoproteome_PDC000216": {
+    "dataset_name": "Proteogenomics_of_Gastric_Cancer_Glycoproteome_PDC000216",
+    "short_name": "ICPC-GC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/Proteogenomics_of_Gastric_Cancer_Glycoproteome_PDC000216/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4_glycosylation",
+    "species": "human",
+    "data_type":"g",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000216",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+
+  "Oral_Squamous_Cell_Carcinoma_Study_Proteome_PDC000262": {
+    "dataset_name": "Oral_Squamous_Cell_Carcinoma_Study_Proteome_PDC000262",
+    "short_name": "ICPC-OSCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/Oral_Squamous_Cell_Carcinoma_Study_Proteome_PDC000262/",
+    "sample_annotation_file": null,
+    "parameter": "iTRAQ4",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000262",
+    "protein_reference_database":{
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir":{
+      "a":"",
+      "b":""
+    }
+  },
+  "HBV_Related_Hepatocellular_Carcinoma_Proteome_PDC000198": {
+    "dataset_name": "HBV_Related_Hepatocellular_Carcinoma_Proteome_PDC000198",
+    "short_name": "ICPC-HCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/HBV_Related_Hepatocellular_Carcinoma_Proteome_PDC000198/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000198",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "HBV_Related_Hepatocellular_Carcinoma_Phosphoproteome_PDC000199": {
+    "dataset_name": "HBV_Related_Hepatocellular_Carcinoma_Phosphoproteome_PDC000199",
+    "short_name": "ICPC-HCC",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/HBV_Related_Hepatocellular_Carcinoma_Phosphoproteome_PDC000199/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000199",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "Academia_Sinica_LUAD100_Proteome_PDC000219": {
+    "dataset_name": "Academia_Sinica_LUAD100_Proteome_PDC000219",
+    "short_name": "ICPC-LUAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/Academia_Sinica_LUAD100_Proteome_PDC000219/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000219",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "Academia_Sinica_LUAD100_Phosphoproteome_PDC000220": {
+    "dataset_name": "Academia_Sinica_LUAD100_Phosphoproteome_PDC000220",
+    "short_name": "ICPC-LUAD",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/Academia_Sinica_LUAD100_Phosphoproteome_PDC000220/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000220",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "Deep_29_healthy_human_tissues_PXD010154": {
+    "dataset_name": "Deep_29_healthy_human_tissues_PXD010154",
+    "short_name": "29_healthy_tissues",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/PXD010154_index/",
+    "sample_annotation_file": null,
+    "parameter": "MS1_H_MS2_H_LF",
+    "species": "human",
+    "data_type":"w",
+    "publication":"30777892",
+    "data_link":"https://www.ebi.ac.uk/pride/archive/projects/PXD010154",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "CPTAC_GBM_Discovery_Study_Proteome_PDC000204": {
+    "dataset_name": "CPTAC_GBM_Discovery_Study_Proteome_PDC000204",
+    "short_name": "CPTAC-GBM",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_GBM_Discovery_Study_Proteome_PDC000204/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000204",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "CPTAC_GBM_Discovery_Study_Phosphoproteome_PDC000205": {
+    "dataset_name": "CPTAC_GBM_Discovery_Study_Phosphoproteome_PDC000205",
+    "short_name": "CPTAC-GBM",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_GBM_Discovery_Study_Phosphoproteome_PDC000205/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000205",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "CPTAC_GBM_Discovery_Study_Acetylome_PDC000245": {
+    "dataset_name": "CPTAC_GBM_Discovery_Study_Acetylome_PDC000245",
+    "short_name": "CPTAC-GBM",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_GBM_Discovery_Study_Acetylome_PDC000245/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_acetylation",
+    "species": "human",
+    "data_type":"a",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000245",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "CPTAC_Pediatric_Brain_Cancer_Pilot_Study_Proteome_PDC000180": {
+    "dataset_name": "CPTAC_Pediatric_Brain_Cancer_Pilot_Study_Proteome_PDC000180",
+    "short_name": "CPTAC-PBT",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Pediatric_Brain_Cancer_Pilot_Study_Proteome_PDC000180/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_MS2_L",
+    "species": "human",
+    "data_type":"w",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000180",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  },
+  "CPTAC_Pediatric_Brain_Cancer_Pilot_Study_Phosphoproteome_PDC000176": {
+    "dataset_name": "CPTAC_Pediatric_Brain_Cancer_Pilot_Study_Phosphoproteome_PDC000176",
+    "short_name": "CPTAC-PBT",
+    "ms_file": "s3://zhanglab-pepquery/msms_library/CPTAC_Pediatric_Brain_Cancer_Pilot_Study_Phosphoproteome_PDC000176/",
+    "sample_annotation_file": null,
+    "parameter": "TMT10_11_MS2_L_phosphorylation",
+    "species": "human",
+    "data_type":"p",
+    "publication":"",
+    "data_link":"https://pdc.cancer.gov/pdc/study/PDC000176",
+    "protein_reference_database": {
+      "hg38_RefSeq_20190910": "data/refdb/hg38_RefSeq_20190910_eTrypsin_c1_f108_6_62_v117/hg38_RefSeq_20190910.fasta",
+      "hg38_Ensembl_20190910": "data/refdb/hg38_Ensembl_20190910_eTrypsin_c1_f108_6_62_v117/hg38_Ensembl_20190910.fasta"
+    },
+    "pga_annotation_dir": {
+      "a": "",
+      "b": ""
+    }
+  }
+}
