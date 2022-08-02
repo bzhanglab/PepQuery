@@ -64,7 +64,12 @@ public class MsdataMatch {
                     //System.out.println(i_mass+"\t"+massRange[0]+"\t"+massRange[1]);
 
                     for (int i = left_range; i <= right_range; i++) {
-                        String i_mgf = msms_library_path + File.separator + i + ".mgf";
+                        String i_mgf;
+                        if(msms_library_path.toLowerCase().startsWith("s3:")) {
+                            i_mgf = msms_library_path + "/" + i + ".mgf";
+                        }else{
+                            i_mgf = msms_library_path + File.separator + i + ".mgf";
+                        }
                         indexed_ms_files.add(i_mgf);
                     }
                 }
