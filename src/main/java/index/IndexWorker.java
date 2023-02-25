@@ -33,6 +33,9 @@ public final class IndexWorker implements Runnable{
     private String outdir;
     private int fold = 10;
 
+    public static int minCharge = 2;
+    public static int maxCharge = 3;
+
     public IndexWorker(String msms_file, String outdir, int fold){
         this.msfile = msms_file;
         this.outdir = outdir;
@@ -152,26 +155,16 @@ public final class IndexWorker implements Runnable{
                             n_msms_without_precursor_charge++;
                             Cloger.getInstance().logger.warn("Precursor charge is empty: file=>" + msFileName_without_suffix + ", scan="+scan.getNum());
                             // if charge is invalid
-                            int charge = 2;
-                            // scan number is original scan number
-                            // double mz = scan.getPrecursor().getMzTarget();
-                            double mz = scan.getPrecursor().getMzTargetMono();
-                            double mass = getMass(mz, charge);
-                            try {
-                                save2file(mass, this.fold, asMgf(scan, msFileName_without_suffix, charge), outdir);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-
-                            charge = 3;
-                            // scan number is original scan number
-                            // mz = scan.getPrecursor().getMzTarget();
-                            mz = scan.getPrecursor().getMzTargetMono();
-                            mass = getMass(mz, charge);
-                            try {
-                                save2file(mass, this.fold, asMgf(scan, msFileName_without_suffix, charge), outdir);
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                            for(int charge=minCharge;charge<=maxCharge;charge++){
+                                // scan number is original scan number
+                                // double mz = scan.getPrecursor().getMzTarget();
+                                double mz = scan.getPrecursor().getMzTargetMono();
+                                double mass = getMass(mz, charge);
+                                try {
+                                    save2file(mass, this.fold, asMgf(scan, msFileName_without_suffix, charge), outdir);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
                             }
 
                         }
@@ -246,26 +239,17 @@ public final class IndexWorker implements Runnable{
                             n_msms_without_precursor_charge++;
                             Cloger.getInstance().logger.warn("Precursor charge is empty: file=>" + msFileName_without_suffix + ", scan="+scan.getNum());
                             // if charge is invalid
-                            int charge = 2;
-                            // scan number is original scan number
-                            // double mz = scan.getPrecursor().getMzTarget();
-                            double mz = scan.getPrecursor().getMzTargetMono();
-                            double mass = getMass(mz, charge);
-                            try {
-                                save2file(mass, this.fold, asMgf(scan, msFileName_without_suffix, charge), outdir);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-
-                            charge = 3;
-                            // scan number is original scan number
-                            // mz = scan.getPrecursor().getMzTarget();
-                            mz = scan.getPrecursor().getMzTargetMono();
-                            mass = getMass(mz, charge);
-                            try {
-                                save2file(mass, this.fold, asMgf(scan, msFileName_without_suffix, charge), outdir);
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                            for(int charge=minCharge;charge<=maxCharge;charge++) {
+                                //int charge = 2;
+                                // scan number is original scan number
+                                // double mz = scan.getPrecursor().getMzTarget();
+                                double mz = scan.getPrecursor().getMzTargetMono();
+                                double mass = getMass(mz, charge);
+                                try {
+                                    save2file(mass, this.fold, asMgf(scan, msFileName_without_suffix, charge), outdir);
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
                             }
 
                         }
@@ -282,7 +266,7 @@ public final class IndexWorker implements Runnable{
             String title;
             Spectrum spectrum = new Spectrum();
             double mass;
-            int charge;
+            //int charge;
             long spectrum_index = 0;
             String spectrumTitle;
             while ((title = mgfFileIterator.next()) != null) {
@@ -301,26 +285,20 @@ public final class IndexWorker implements Runnable{
                     Cloger.getInstance().logger.warn("Precursor charge is empty: " + spectrum.getSpectrumTitle());
                     // must process spectra without precursor charge information
                     // will consider 2+ and 3+ in default
-                    charge = 2;
-                    mass = spectrum.getPrecursor().getMass(charge);
-                    spectrumTitle = msFileName_without_suffix+":"+scanNumber+":"+charge;
-                    try {
-                        save2file(mass,this.fold,asMgf(spectrum, spectrumTitle,charge,scanNumber),outdir);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    charge = 3;
-                    mass = spectrum.getPrecursor().getMass(charge);
-                    try {
-                        save2file(mass,this.fold,asMgf(spectrum, spectrumTitle,charge,scanNumber),outdir);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    for(int charge=minCharge;charge<=maxCharge;charge++) {
+                        //charge = 2;
+                        mass = spectrum.getPrecursor().getMass(charge);
+                        spectrumTitle = msFileName_without_suffix + ":" + scanNumber + ":" + charge;
+                        try {
+                            save2file(mass, this.fold, asMgf(spectrum, spectrumTitle, charge, scanNumber), outdir);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
 
                 } else {
 
-                    charge = spectrum.getPrecursor().possibleCharges[0];
+                    int charge = spectrum.getPrecursor().possibleCharges[0];
                     mass = spectrum.getPrecursor().getMass(charge);
 
                     // Need to process spectra without precursor charge.

@@ -26,6 +26,10 @@ public class BuildMSlibrary {
     private final int fold = 10;
     public int ncpu = 0;
 
+    public int minCharge = 2;
+    public int maxCharge = 3;
+    public boolean gz = false;
+
     /**
      * If there is an error when compress a file, this parameter will need to set as true.
      */
@@ -51,6 +55,10 @@ public class BuildMSlibrary {
         options.addOption("m",true,"Method for Raw MS/MS data conversion: ThermoRawFileParser");
         options.addOption("r",false,"Delete raw file after data conversion");
         options.addOption("show",false,"Show all files without downloading any file.");
+        options.addOption("minCharge", true, "The minimum charge to consider if the charge state is not available, default is 2");
+        options.addOption("maxCharge", true, "The maximum charge to consider if the charge state is not available, default is 3");
+        options.addOption("gz",false,"gz file");
+
 
         options.addOption("h", false, "Help");
 
@@ -89,6 +97,18 @@ public class BuildMSlibrary {
         if(cmd.hasOption("r")){
             FileDownload.rawDataConvert.delete_raw_file_after_conversion = true;
         }
+
+        if(cmd.hasOption("minCharge")){
+            buildMSlibrary.minCharge = Integer.parseInt(cmd.getOptionValue("minCharge"));
+        }
+        if(cmd.hasOption("maxCharge")){
+            buildMSlibrary.maxCharge = Integer.parseInt(cmd.getOptionValue("maxCharge"));
+        }
+
+        if(cmd.hasOption("gz")){
+            buildMSlibrary.gz = true;
+        }
+
 
         FileDownload.do_raw_data_conversion = true;
         FileDownload.rawDataConvert.delete_raw_file_after_conversion = true;
@@ -291,28 +311,30 @@ public class BuildMSlibrary {
         sReader.write("total_msms_spectra="+n_spectra+"\n");
         sReader.close();
 
-        Cloger.getInstance().logger.info("Compress index files ...");
-        gzfiles(outdir,".mgf",outdir);
-        Cloger.getInstance().logger.info("Compress index files done");
+        if(this.gz) {
+            Cloger.getInstance().logger.info("Compress index files ...");
+            gzfiles(outdir, ".mgf", outdir);
+            Cloger.getInstance().logger.info("Compress index files done");
 
-        if(!compress_file_error) {
-            Cloger.getInstance().logger.info("Delete all .mgf index files, keep .mgf.gz index files ...");
-            File DIR = new File(outdir);
-            File[] all_files = DIR.listFiles();
-            boolean delete_with_error = false;
-            for(File F : all_files){
-                if(F.isFile() && F.getName().toLowerCase().endsWith(".mgf")){
-                    if(!F.delete()){
-                        delete_with_error = true;
-                        if(delete_with_error){
-                            Cloger.getInstance().logger.error("Error: delete file -> "+F.getAbsolutePath());
-                            System.exit(1);
+            if (!compress_file_error) {
+                Cloger.getInstance().logger.info("Delete all .mgf index files, keep .mgf.gz index files ...");
+                File DIR = new File(outdir);
+                File[] all_files = DIR.listFiles();
+                boolean delete_with_error = false;
+                for (File F : all_files) {
+                    if (F.isFile() && F.getName().toLowerCase().endsWith(".mgf")) {
+                        if (!F.delete()) {
+                            delete_with_error = true;
+                            if (delete_with_error) {
+                                Cloger.getInstance().logger.error("Error: delete file -> " + F.getAbsolutePath());
+                                System.exit(1);
+                            }
                         }
                     }
                 }
-            }
-            Cloger.getInstance().logger.info("Delete all .mgf index files, keep .mgf.gz index files. Done");
+                Cloger.getInstance().logger.info("Delete all .mgf index files, keep .mgf.gz index files. Done");
 
+            }
         }
         return outdir;
 
