@@ -34,8 +34,8 @@ public class FileDownload {
     public static RawDataConvert rawDataConvert = new RawDataConvert();
     public static boolean do_raw_data_conversion = false;
 
-    private final String proxi_base = "http://proteomecentral.proteomexchange.org/api/proxi/v0.1/datasets/";
-    private final String usi_base = "http://proteomecentral.proteomexchange.org/api/proxi/v0.1/spectra?resultType=full&usi=";
+    private final String proxi_base = "https://proteomecentral.proteomexchange.org/api/proxi/v0.1/datasets/";
+    private final String usi_base = "https://proteomecentral.proteomexchange.org/api/proxi/v0.1/spectra?resultType=full&usi=";
     /**
      * Cannot use ftp://massive.ucsd.edu/
      * https://blog.csdn.net/qq_36338455/article/details/86526236
