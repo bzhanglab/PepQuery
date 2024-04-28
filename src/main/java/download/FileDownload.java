@@ -14,10 +14,7 @@ import java.io.*;
 import java.lang.reflect.Array;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -293,7 +290,12 @@ public class FileDownload {
     }
 
     private String download_from_massive(String dataset_id, String out_dir, int n_cpu, String file_pattern){
-        String new_out_dir = download_from_ftp(dataset_id,"", out_dir,n_cpu,file_pattern,this.massive_base);
+        String dataset_id_path = get_dataset_path_from_massive(this.massive_base,"",dataset_id);
+        String host_extra = "";
+        if(dataset_id_path.endsWith(dataset_id)){
+            host_extra = dataset_id_path.replaceAll("/"+dataset_id+"$","");
+        }
+        String new_out_dir = download_from_ftp(dataset_id,host_extra, out_dir,n_cpu,file_pattern,this.massive_base);
         return new_out_dir;
     }
 
@@ -710,6 +712,86 @@ public class FileDownload {
         catch (Exception e) {
             return false;
         }
+    }
+
+    public static String get_dataset_path_from_massive(String ftp_base, String remoteDirectory, String dataset_id){
+
+        String dataset_id_path = "-";
+
+        FTPClient client = new FTPClient();
+        String host = ftp_base;
+        Integer ftpPort = 21; // default ftp port, change your port number
+
+        try {
+            client.connect(host);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        client.enterLocalPassiveMode();
+        try {
+            client.login("anonymous", "");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            ArrayList<String> d1_folders = list_folders(client,remoteDirectory,"");
+            boolean found = false;
+            for(String rd: d1_folders){
+                ArrayList<String> datasets_ids = list_folders(client,rd,"");
+                for(String id: datasets_ids){
+                    if(id.endsWith(dataset_id)){
+                        dataset_id_path = id;
+                        found = true;
+                        break;
+                    }
+                }
+                if(found){
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // log out and disconnect from the server
+        if(client.isConnected()){
+            try {
+                client.logout();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                client.disconnect();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return dataset_id_path;
+    }
+
+    private static ArrayList<String> list_folders(FTPClient ftp_client, String parent_dir, String current_dir) throws IOException {
+        String dir_to_list = parent_dir;
+        if(!current_dir.equals("")){
+            dir_to_list = dir_to_list + "/" + current_dir;
+        }
+        FTPFile[] subFiles = ftp_client.listFiles(dir_to_list);
+        ArrayList<String> base_ftp_file_names = new ArrayList<>();
+        if(subFiles != null && subFiles.length >0){
+            for(FTPFile aFile : subFiles){
+                String current_file_name = aFile.getName();
+                if(current_file_name.equals(".") || current_file_name.equals("..")){
+                    // skip parent directory and current directory
+                    continue;
+                }else{
+                    if(aFile.isDirectory()){
+                        String ftp_url = dir_to_list+"/"+current_file_name;
+                        base_ftp_file_names.add(ftp_url);
+                    }
+                }
+            }
+        }
+        return base_ftp_file_names;
     }
 
 }

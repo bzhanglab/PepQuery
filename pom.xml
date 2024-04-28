@@ -179,18 +179,18 @@
     <repository>
         <id>genesis-maven2-repository</id>
         <name>Genesis maven2 repository</name>
-        <url>http://genesis.UGent.be/maven2</url>
+        <url>https://genesis.UGent.be/maven2</url>
     </repository>
 
     <repository>
         <id>biojava-maven-repo</id>
         <name>BioJava repository</name>
-        <url>http://www.biojava.org/download/maven/</url>
+        <url>https://www.biojava.org/download/maven/</url>
     </repository>
 
     <repository>
         <id>nexus-ebi-release-repo</id>
-        <url>http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
+        <url>https://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/</url>
     </repository>
 
 
@@ -216,6 +216,14 @@
     </resources>
     <plugins>
 
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.3.1</version>
+            <configuration>
+                <encoding>UTF-8</encoding>
+            </configuration>
+        </plugin>
 
         <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
