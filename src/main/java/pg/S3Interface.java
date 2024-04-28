@@ -2,6 +2,8 @@ package main.java.pg;
 
 
 //import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.ClientConfiguration;
+import com.amazonaws.SdkClientException;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.AnonymousAWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -31,6 +33,9 @@ public class S3Interface {
         //this.s3Client = AmazonS3ClientBuilder.defaultClient();
         s3Client = AmazonS3ClientBuilder
                 .standard()
+                .withClientConfiguration(
+                        new ClientConfiguration()
+                                .withMaxErrorRetry(10))
                 .withCredentials(new AWSStaticCredentialsProvider(new AnonymousAWSCredentials()))
                 .withRegion("us-west-2")
                 .build();
@@ -62,7 +67,13 @@ public class S3Interface {
                 uri = new AmazonS3URI(objPath);
             }
         }catch (AmazonS3Exception e){
-            Cloger.getInstance().logger.error("Error when retrieving MS/MS index file!");
+            Cloger.getInstance().logger.error("AmazonS3Exception: Error when retrieving MS/MS index file!");
+            Cloger.getInstance().logger.error(objPath);
+            e.printStackTrace();
+            System.exit(1);
+        }catch (SdkClientException e){
+            Cloger.getInstance().logger.error("SdkClientException: Error when retrieving MS/MS index file!");
+            Cloger.getInstance().logger.error(objPath);
             e.printStackTrace();
             System.exit(1);
         }
