@@ -115,11 +115,13 @@ public final class DatabaseInput {
             Enzyme enzyme = EnzymeFactory.getInstance().getEnzyme(enzymeName);
             digestionParameters.addEnzyme(enzyme);
             digestionParameters.setnMissedCleavages(enzymeName, enzymeMissedCleavages);
-        }else if(enzymeName.equalsIgnoreCase("NoEnzyme")){
+        }else if(enzymeName.equalsIgnoreCase("NoEnzyme")) {
             digestionParameters.setCleavageParameter(DigestionParameters.CleavageParameter.unSpecific);
             Enzyme enzyme = getEnzymeByIndex(0);
             digestionParameters.addEnzyme(enzyme);
             digestionParameters.setnMissedCleavages(enzymeName, 1000);
+        }else if(enzymeName.equalsIgnoreCase("NoDigestion")){
+                digestionParameters.setCleavageParameter(DigestionParameters.CleavageParameter.wholeProtein);
         }else{
             System.err.println("No valid enzyme:"+enzymeName);
             System.exit(0);
@@ -254,6 +256,15 @@ public final class DatabaseInput {
         enzyme.addAminoAcidAfter('K');
         enzymes.add(enzyme);
 
+
+        enzyme = new Enzyme("NoDigestion");
+        // no useful
+        // enzyme.addAminoAcidBefore('R');
+        // no useful
+        // enzyme.addAminoAcidBefore('K');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001045", "NoDigestion", null));
+        enzymes.add(enzyme);
+
         //if(ind<=0 || ind > enzymes.size()){
         if(ind < 0 || ind > enzymes.size()){
             System.err.println("Please provide a valid enzyme number:"+ind);
@@ -264,6 +275,138 @@ public final class DatabaseInput {
 
         // return(enzymes.get(ind-1));
         return(enzymes.get(ind));
+    }
+
+    public static int getEnzymeIndexByName(String enzyme_name){
+
+        HashMap<String, Integer> enzymes = new HashMap<>();
+
+        // 0 non-specific digestion
+        Enzyme enzyme = new Enzyme("NoEnzyme");
+        // no useful
+        enzyme.addAminoAcidBefore('R');
+        // no useful
+        enzyme.addAminoAcidBefore('K');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001956", "NoEnzyme", null));
+        enzymes.put(enzyme.getName(),0);
+
+        enzyme = new Enzyme("Trypsin");
+        enzyme.addAminoAcidBefore('R');
+        enzyme.addAminoAcidBefore('K');
+        enzyme.addRestrictionAfter('P');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001251", "Trypsin", null));
+        enzymes.put(enzyme.getName(),1);
+
+        enzyme = new Enzyme("Trypsin (no P rule)");
+        enzyme.addAminoAcidBefore('R');
+        enzyme.addAminoAcidBefore('K');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001313", "Trypsin/P", null));
+        enzymes.put(enzyme.getName(),2);
+
+        enzyme = new Enzyme("Arg-C");
+        enzyme.addAminoAcidBefore('R');
+        enzyme.addRestrictionAfter('P');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001303", "Arg-C", null));
+        enzymes.put(enzyme.getName(),3);
+
+        enzyme = new Enzyme("Arg-C (no P rule)");
+        enzyme.addAminoAcidBefore('R');
+        enzymes.put(enzyme.getName(),4);
+
+        enzyme = new Enzyme("Arg-N");
+        enzyme.addAminoAcidAfter('R');
+        enzymes.put(enzyme.getName(),5);
+
+        enzyme = new Enzyme("Glu-C");
+        enzyme.addAminoAcidBefore('E');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001917", "glutamyl endopeptidase", null));
+        enzymes.put(enzyme.getName(),6);
+
+        enzyme = new Enzyme("Lys-C");
+        enzyme.addAminoAcidBefore('K');
+        enzyme.addRestrictionAfter('P');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001309", "Lys-C", null));
+        enzymes.put(enzyme.getName(),7);
+
+        enzyme = new Enzyme("Lys-C (no P rule)");
+        enzyme.addAminoAcidBefore('K');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001310", "Lys-C/P", null));
+        enzymes.put(enzyme.getName(),8);
+
+        enzyme = new Enzyme("Lys-N");
+        enzyme.addAminoAcidAfter('K');
+        enzymes.put(enzyme.getName(),9);
+
+        enzyme = new Enzyme("Asp-N");
+        enzyme.addAminoAcidAfter('D');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001304", "Asp-N", null));
+        enzymes.put(enzyme.getName(),10);
+
+        enzyme = new Enzyme("Asp-N (ambic)");
+        enzyme.addAminoAcidAfter('D');
+        enzyme.addAminoAcidAfter('E');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001305", "Asp-N_ambic", null));
+        enzymes.put(enzyme.getName(),11);
+
+        enzyme = new Enzyme("Chymotrypsin");
+        enzyme.addAminoAcidBefore('F');
+        enzyme.addAminoAcidBefore('Y');
+        enzyme.addAminoAcidBefore('W');
+        enzyme.addAminoAcidBefore('L');
+        enzyme.addRestrictionAfter('P');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001306", "Chymotrypsin", null));
+        enzymes.put(enzyme.getName(),12);
+
+        enzyme = new Enzyme("Chymotrypsin (no P rule)");
+        enzyme.addAminoAcidBefore('F');
+        enzyme.addAminoAcidBefore('Y');
+        enzyme.addAminoAcidBefore('W');
+        enzyme.addAminoAcidBefore('L');
+        enzymes.put(enzyme.getName(),13);
+
+        enzyme = new Enzyme("Pepsin A");
+        enzyme.addAminoAcidBefore('F');
+        enzyme.addAminoAcidBefore('L');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001311", "Pepsin A", null));
+        enzymes.put(enzyme.getName(),14);
+
+        enzyme = new Enzyme("CNBr");
+        enzyme.addAminoAcidBefore('M');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001307", "CNBr", null));
+        enzymes.put(enzyme.getName(),15);
+
+        enzyme = new Enzyme("Thermolysin");
+        enzyme.addAminoAcidAfter('A');
+        enzyme.addAminoAcidAfter('F');
+        enzyme.addAminoAcidAfter('I');
+        enzyme.addAminoAcidAfter('L');
+        enzyme.addAminoAcidAfter('M');
+        enzyme.addAminoAcidAfter('V');
+        enzymes.put(enzyme.getName(),16);
+
+        enzyme = new Enzyme("LysargiNase");
+        enzyme.addAminoAcidAfter('R');
+        enzyme.addAminoAcidAfter('K');
+        enzymes.put(enzyme.getName(),17);
+
+
+        enzyme = new Enzyme("NoDigestion");
+        // no useful
+        // enzyme.addAminoAcidBefore('R');
+        // no useful
+        // enzyme.addAminoAcidBefore('K');
+        enzyme.setCvTerm(new CvTerm("PSI-MS", "MS:1001045", "NoDigestion", null));
+        enzymes.put(enzyme.getName(),18);
+
+        // System.out.println("Use enzyme:"+enzymes.get(ind-1).getName());
+
+        // return(enzymes.get(ind-1));
+        if(enzymes.containsKey(enzyme_name)){
+            Cloger.getInstance().logger.info("Use enzyme:"+enzymes.get(enzyme_name));
+            return enzymes.get(enzyme_name);
+        }else{
+            return -1;
+        }
     }
 
 

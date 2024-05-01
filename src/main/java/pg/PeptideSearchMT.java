@@ -65,7 +65,7 @@ public class PeptideSearchMT {
         options.addOption("decoy",false,"In known protein identification mode, try to identity the decoy version of the selected target protein. Default is false.");
 
         // MS/MS data generation related parameters
-        options.addOption("e",true,"Enzyme used for protein digestion. 0:Non enzyme, 1:Trypsin (default), 2:Trypsin (no P rule), 3:Arg-C, 4:Arg-C (no P rule), 5:Arg-N, 6:Glu-C, 7:Lys-C");
+        options.addOption("e",true,"Enzyme used for protein digestion. 0:Non enzyme, 1:Trypsin (default), 2:Trypsin (no P rule), 3:Arg-C, 4:Arg-C (no P rule), 5:Arg-N, 6:Glu-C, 7:Lys-C, NoDigestion");
         options.addOption("c",true,"The max missed cleavages, default is 2");
         options.addOption("minLength", true, "The minimum length of peptide to consider, default is 7");
         options.addOption("maxLength", true, "The maximum length of peptide to consider, default is 45");

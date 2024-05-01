@@ -672,7 +672,11 @@ public class CParameter {
         }
 
         if(cmd.hasOption("e")){
-            CParameter.enzyme = Integer.parseInt(cmd.getOptionValue("e"));
+            if(DatabaseInput.getEnzymeIndexByName(cmd.getOptionValue("e"))>=0){
+                CParameter.enzyme = DatabaseInput.getEnzymeIndexByName(cmd.getOptionValue("e"));
+            }else {
+                CParameter.enzyme = Integer.parseInt(cmd.getOptionValue("e"));
+            }
         }
         if(cmd.hasOption("c")){
             int missCleavages = Integer.parseInt(cmd.getOptionValue("c"));
